@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/wings-software/go-template/internal"
+	"github.com/harness/go-template/internal"
 )
 
 var (

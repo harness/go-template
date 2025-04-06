@@ -1,4 +1,4 @@
-module github.com/wings-software/go-template
+module github.com/harness/go-template
 
 go 1.21.11
 
