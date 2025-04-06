@@ -9,7 +9,10 @@ import (
 )
 
 var (
-	version = "dev"
+	versionMajor string = "0"
+	versionMinor string = "1"
+	versionPatch string = "1"
+	gitref       string = "dev-default"
 )
 
 type arrayFlags []string
@@ -41,8 +44,18 @@ func main() {
 	flag.Var(&setFlags, "s", "Set variable override.")
 	flag.Parse()
 
-	if *versionPtr == true {
-		fmt.Println(version)
+	if *versionPtr {
+		versionString := versionMajor
+		if versionMinor != "" {
+			versionString += "." + versionMinor
+		}
+		if versionPatch != "" {
+			versionString += "." + versionPatch
+		}
+		if gitref != "" {
+			versionString += " (" + gitref + ")"
+		}
+		fmt.Println(versionString)
 		return
 	}
 
