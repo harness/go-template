@@ -3,7 +3,7 @@ BINARY_NAME			:= go-template
 BINDIR				:= $(CURDIR)/bin
 DISTDIR				:= $(CURDIR)/dist
 PARALLEL_BUILDS_CNT	:= 4
-TARGETS				:= darwin/amd64 darwin/arm64 linux/amd64 linux/arm64 windows/amd64 windows/arm64
+TARGETS				:= darwin/amd64 darwin/arm64 linux/amd64 linux/arm64 windows/amd64
 LDFLAGS				:= -w -s
 GOFLAGS				:=
 
