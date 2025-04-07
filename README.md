@@ -12,11 +12,8 @@ go-template <-t templateFilePath> [-f valuesFilePath] [-s variableOverride] [-o 
 ### Manual Release
 To generate binaries, run:
 ```sh
-goreleaser release --clean --skip publish
+make build-release
 ```
-
-### Automated Release
-[.goreleaser.yml](.goreleaser.yml) can be integrated with tools like Github Actions to automate build and release process.
 
 ## License
 
