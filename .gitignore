@@ -24,3 +24,5 @@ windows
 
 build/*
 dist/*
+bin/go-template
+go-template
