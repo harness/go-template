@@ -1,8 +1,6 @@
 module github.com/harness/go-template
 
-go 1.23.0
-
-toolchain go1.23.3
+go 1.24.11
 
 require (
 	github.com/Masterminds/sprig v2.22.0+incompatible
