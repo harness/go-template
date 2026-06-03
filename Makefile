@@ -82,6 +82,6 @@ build:
 .PHONY: build-release
 build-release: $(GOX)
 build-release: LDFLAGS += -extldflags "-static"
-build-release: 
+build-release:
 	$(if $(VERSION),, $(error Version is required for build-release target))
-	$(GOX) -parallel=$(PARALLEL_BUILDS_CNT) -output="${DISTDIR}/$(BINARY_NAME)/release/v$(VERSION)/bin/{{.OS}}/{{.Arch}}/$(BINARY_NAME)" -osarch='$(TARGETS)' $(GOFLAGS) -tags '$(TAGS)' -ldflags '$(LDFLAGS)' ${MAIN_PACKAGE_PATH}
+	CGO_ENABLED=0 $(GOX) -parallel=$(PARALLEL_BUILDS_CNT) -output="${DISTDIR}/$(BINARY_NAME)/release/v$(VERSION)/bin/{{.OS}}/{{.Arch}}/$(BINARY_NAME)" -osarch='$(TARGETS)' $(GOFLAGS) -tags '$(TAGS)' -ldflags '$(LDFLAGS)' ${MAIN_PACKAGE_PATH}
