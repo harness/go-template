@@ -44,7 +44,7 @@ GOLANGCI_LINT = $(GOBIN)/golangci-lint
 
 $(GOLANGCI_LINT):
 	@echo "Instal golangci-lint"
-	@curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(GOBIN) v1.55.1
+	@curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(GOBIN) v2.11.0
 
 $(GOX):
 	@echo "Install gox"
